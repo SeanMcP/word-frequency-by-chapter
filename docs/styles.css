@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 1rem;
+}
+
+main.book {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 600px) {
+    main.book {
+        grid-template-columns: 16rem auto;
+    }
+    
+    #sticky-nav {
+        position: sticky;
+        top: 1rem;
+    }
+
+    main.home nav {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+nav ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+main.book nav ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(0.5rem, 2rem));
+}
+
+main.book nav ol a {
+    display: block;
+}
+
+#back-to-top {
+    bottom: 1rem;
+    border: 1px solid currentColor;
+    padding: 1rem;
+    position: fixed;
+    right: 1rem;
+}
+
+footer p {
+    margin: 1rem;
+}
