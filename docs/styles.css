@@ -49,6 +49,17 @@ main.book nav ol a {
     display: block;
 }
 
+label {
+    display: block;
+    margin: 1rem 0;
+}
+
+input {
+    font-size: inherit;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
 #back-to-top {
     bottom: 1rem;
     border: 1px solid currentColor;

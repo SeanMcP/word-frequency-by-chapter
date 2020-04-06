@@ -83,6 +83,8 @@ for (let book of orderedBooks) {
     body += `
                 </ol>
                 <a href="../">View all books</a>
+                <label>Limit to top:<br /><input type="number" id="limit-input" /></label>
+                <script src="../limit.js"></script>
             </nav>
         </div>
     </section>` // Close TOC
