@@ -1,9 +1,15 @@
-body {
-    margin: 0;
+html {
+    background: #f5f5f5;
 }
 
-main {
-    margin: 1rem;
+body {
+    color: #333;
+    font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 40rem;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 main.book {
@@ -52,5 +58,5 @@ main.book nav ol a {
 }
 
 footer p {
-    margin: 1rem;
+    margin-bottom: 0;
 }
