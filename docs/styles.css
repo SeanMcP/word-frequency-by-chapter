@@ -1,9 +1,16 @@
+:root {
+    --background: #f5f5f5;
+    --border-color: rgba(0, 0, 0, 0.25);
+    --border: 1px solid var(--border-color);
+    --text: #333;
+}
+
 html {
-    background: #f5f5f5;
+    background: var(--background);
 }
 
 body {
-    color: #333;
+    color: var(--text);
     font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
     margin: 0 auto;
     padding: 1rem;
@@ -12,9 +19,14 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-main.book {
-    display: grid;
-    gap: 1rem;
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    margin-top: 1em;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0;
 }
 
 /* Desktop styles */
@@ -26,6 +38,11 @@ main.book {
     #sticky-nav {
         position: sticky;
         top: 1rem;
+    }
+    
+    main.book {
+        display: grid;
+        gap: 2rem;
     }
 
     main.home nav {
@@ -62,12 +79,13 @@ main.book nav ol a {
 
 #limit-form button,
 #limit-form input {
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: var(--border);
     font-size: inherit;
 }
 
 #limit-form button {
     background: transparent;
+    cursor: pointer;
     font-family: inherit;
     min-width: 48px;
 }
@@ -77,11 +95,26 @@ main.book nav ol a {
 }
 
 #back-to-top {
-    bottom: 1rem;
-    border: 1px solid currentColor;
+    background: var(--background);
+    bottom: 1.5rem;
+    border: var(--border);
+    color: var(--text);
+    outline: 0.25rem solid var(--background);
     padding: 1rem;
     position: fixed;
     right: 1rem;
+    text-decoration: none;
+}
+
+#limit-form button:hover,
+#back-to-top:hover {
+    background: var(--text);
+    color: var(--background);
+}
+
+footer {
+    border-top: var(--border);
+    margin: 1rem 0 0;
 }
 
 footer p {
