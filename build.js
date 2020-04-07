@@ -11,6 +11,7 @@ const byChapterData = JSON.parse(fs.readFileSync(path.join(__dirname, 'word-freq
 function buildIndex() {
     let body = `
         <h1>Word Frequency by Bible Chapter</h1>
+        <p>The most common words in every chapter of the Bible</p>
         <nav>
             <section>
             <h2>Old Testament</h2>
@@ -33,6 +34,17 @@ function buildIndex() {
     }
     
     body += '</ol></section></nav>'
+
+    body += `
+        <section id="about">
+            <h2>Why?</h2>
+            <p>When reading the Bible with my family, I like to pick out a word that my young son should listen for. I want it to be relevant to the passage and common enough to keep him engaged throughout the reading.</p>
+            <p>While it is sometimes easy to scan a chapter and pick a suitable word, often times it is not. This website makes it easier to find the right word for each chapter of the Bible.</p>
+            <h2>Why old English?</h2>
+            <p>The computer program behind this website reads every chapter of the Bible and counts the word frequency. The only Bible translations that are free and available to use are in the public domain. I chose the King James Version because it meets that criterion and is still used today.</p>
+            <p>In my experience, finding the word in my preferred translation has been easy, especially if you are choosing a word that occurs frequently in a chapter.</p>
+        </section>
+    `
 
     let html = htmlHead(`<title>Word Frequency by Bible Chapter</title><link rel="stylesheet" href="./styles.css" />`) + htmlBody(body, "home") + htmlTail()
     
@@ -104,8 +116,6 @@ for (let book of orderedBooks) {
     mkdirp.sync(targetDir)
 
     fs.writeFileSync(path.join(targetDir, 'index.html'), html)
-
-    body = ''
 }
 
 
