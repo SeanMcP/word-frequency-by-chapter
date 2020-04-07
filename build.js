@@ -107,7 +107,7 @@ for (let book of orderedBooks) {
 
     body += chaptersHtml + '</section>'
 
-    body += `<a href="#top" id="back-to-top">Back to top</a>`
+    body += `<a href="#main" id="back-to-top">Back to top</a>`
 
     const html = htmlHead(`<title>Most frequent words in ${book}</title><link rel="stylesheet" href="../styles.css" />`) + htmlBody(body, "book") + htmlTail()
 
@@ -139,7 +139,7 @@ function htmlHead(head = '') {
 function htmlBody(body = '', mainClass = '') {
     return `
 <body>
-    <main class="${mainClass}">
+    <main class="${mainClass}" id="main">
     ${body}
     </main>
     <footer>
