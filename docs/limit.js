@@ -1,10 +1,13 @@
-let limitInput = document.getElementById('limit-input')
+let limitForm = document.getElementById('limit-form')
 
-limitInput.addEventListener('change', event => {
-    let { value } = event.target
+limitForm.addEventListener('submit', event => {
+    event.preventDefault()
 
-    let styles = value ? `
-        #chapters li:nth-child(n + ${Number(value) + 1}) { display: none }
+    let formData = new FormData(event.target)
+    let top = Number(formData.get('top'))
+
+    let styles = top ? `
+        #chapters li:nth-child(n + ${top + 1}) { display: none }
     ` : ''
 
     let limitStyles = document.getElementById('limit-styles')
@@ -13,10 +16,10 @@ limitInput.addEventListener('change', event => {
         limitStyles.innerHTML = styles
     } else {
         let styleTag = document.createElement('style')
-        styleTag.id="limit-styles"
-    
+        styleTag.id = 'limit-styles'
+
         styleTag.innerHTML = styles
-    
+
         document.head.appendChild(styleTag)
     }
 })

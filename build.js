@@ -83,7 +83,11 @@ for (let book of orderedBooks) {
     body += `
                 </ol>
                 <a href="../">View all books</a>
-                <label>Limit to top:<br /><input type="number" id="limit-input" /></label>
+                <form id="limit-form">
+                    <label for="limit-input">Limit to top</label>
+                    <input id="limit-input" name="top" type="text" inputmode="numberic" pattern="[0-9]*" />
+                    <button>Go</button>
+                </form>
                 <script src="../limit.js"></script>
             </nav>
         </div>

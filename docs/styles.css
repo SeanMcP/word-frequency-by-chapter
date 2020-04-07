@@ -49,14 +49,30 @@ main.book nav ol a {
     display: block;
 }
 
-label {
-    display: block;
+#limit-form {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: auto min-content;
     margin: 1rem 0;
 }
 
-input {
+#limit-form label {
+    grid-column: 1 / span 2;
+}
+
+#limit-form button,
+#limit-form input {
+    border: 1px solid rgba(0, 0, 0, 0.25);
     font-size: inherit;
-    margin: 0.5rem 0;
+}
+
+#limit-form button {
+    background: transparent;
+    font-family: inherit;
+    min-width: 48px;
+}
+
+#limit-form input {
     padding: 0.5rem;
 }
 
