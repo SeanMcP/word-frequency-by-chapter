@@ -1,0 +1,47 @@
+body {
+    background-color: #f1efed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    width: min(100%, 40rem);
+}
+
+header, main, footer {
+    padding: 1rem;
+}
+
+.site-header {
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.chapter-navigation {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+}
+
+.chapter-navigation a {
+    border: 1px solid currentColor;
+    border-bottom-width: 2px;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.testament-navigation a {
+    display: block;
+}
+
+@media screen and (min-width: 500px) {
+    .testament-navigation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
