@@ -6,26 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Word Frequency by Bible Chapter</title>
     <meta name="description" content="The most common words in every chapter of the Bible" />
-    <link rel="stylesheet" href="/word-frequency-by-chapter/styles/main.css">
+    <link rel="stylesheet" href="/word-frequency-by-chapter/assets/styles.css">
+    <link rel="shortcut icon" href="/word-frequency-by-chapter/assets/favicon.png" type="image/png">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header" role="banner">
-      <span class="logo" aria-label="Word Frequency by Bible Chapter">ƒ</span>
-      <nav class="main-nav" aria-label="book navigation">
-        <a href="/word-frequency-by-chapter/">All</a>
-        <a href="/word-frequency-by-chapter/alphabetical">Alphabetical</a>
+      <a class="logo" aria-label="Word Frequency by Bible Chapter" href="/word-frequency-by-chapter/">ƒ</a>
+      <nav class="main-nav" aria-label="main navigation">
+        <a href="/word-frequency-by-chapter/#old" aria-label="Old Testament">OT</a>
+        <a href="/word-frequency-by-chapter/#new" aria-label="New Testament">NT</a>
+        <a href="/word-frequency-by-chapter/about">About</a>
       </nav>
     </header>
-    <main tabindex="-1" id="main-content">
+    <main id="main" id="main-content">
         
 
 
 
 <h1>The most common words in every chapter of the Bible</h1>
 
-<nav class="testament-navigation" aria-label="testament navigation">
+<nav class="testament-navigation" aria-label="testament navigation" id="books">
 <article>
-<h2>Old Testament</h2>
+<h2 id="old">Old Testament</h2>
 <a href="genesis/">Genesis</a>
 <a href="exodus/">Exodus</a>
 <a href="leviticus/">Leviticus</a>
@@ -67,7 +70,7 @@
 <a href="malachi/">Malachi</a>
 </article>
 <article>
-<h2>New Testament</h2>
+<h2 id="new">New Testament</h2>
 <a href="matthew/">Matthew</a>
 <a href="mark/">Mark</a>
 <a href="luke/">Luke</a>
@@ -97,18 +100,8 @@
 <a href="revelation/">Revelation</a>
 </article>
 </nav>
-<section id="about">
-<h2>Why?</h2>
-<p>When reading the Bible with my family, I like to pick out a word that my young son should listen for. I want it to be relevant to the passage and common enough to keep him engaged throughout the reading.</p>
-<p>While it is sometimes easy to scan a chapter and pick a suitable word, often times it is not. This website makes it easier to find the right word for each chapter of the Bible.</p>
-<h2>Why old English?</h2>
-<p>The computer program behind this website reads every chapter of the Bible and counts the word frequency. The only Bible translations that are free and available to use are in the public domain. I chose the King James Version because it meets that criterion and is still used today.</p>
-<p>In my experience, finding the word in my preferred translation has been easy, especially if you are choosing a word that occurs frequently in a chapter.</p>
-</section>
+
 
     </main>
-    <footer>
-        Made by <a href="https://seanmcp.com" rel="noopener noreferrer">SeanMcP</a>
-    </footer>
   </body>
 </html>

@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ title or pageTitle }}</title>
     <meta name="description" content="{{ description }}" />
-    <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
+    <link rel="shortcut icon" href="{{ '/assets/favicon.png' | url }}" type="image/png">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header" role="banner">
-      <span class="logo" aria-label="Word Frequency by Bible Chapter">ƒ</span>
-      <nav class="main-nav" aria-label="book navigation">
-        <a href="{{ '/' | url }}">All</a>
-        <a href="{{ '/alphabetical' | url }}">Alphabetical</a>
+      <a class="logo" aria-label="Word Frequency by Bible Chapter" href="{{ '/' | url }}">ƒ</a>
+      <nav class="main-nav" aria-label="main navigation">
+        <a href="{{ '/#old' | url }}" aria-label="Old Testament">OT</a>
+        <a href="{{ '/#new' | url }}" aria-label="New Testament">NT</a>
+        <a href="{{ '/about' | url }}">About</a>
       </nav>
     </header>
-    <main tabindex="-1" id="main-content">
+    <main id="main" id="main-content">
         {% block content %}{% endblock %}
     </main>
-    <footer>
-        Made by <a href="https://seanmcp.com" rel="noopener noreferrer">SeanMcP</a>
-    </footer>
   </body>
 </html>

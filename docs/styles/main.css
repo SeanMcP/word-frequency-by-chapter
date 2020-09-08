@@ -1,47 +1,204 @@
+:root {
+  --link-color: #9e181d;
+  --main-background: #f5eedf;
+  --text-color: #223457;
+}
+
+@media screen and (max-width: 500px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
 body {
-    background-color: #f1efed;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 0 auto;
-    width: min(100%, 40rem);
-}
-
-header, main, footer {
-    padding: 1rem;
-}
-
-.site-header {
-    align-items: center;
-    display: flex;
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-right: 1rem;
-}
-
-.chapter-navigation {
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
-}
-
-.chapter-navigation a {
-    border: 1px solid currentColor;
-    border-bottom-width: 2px;
-    padding: 0.25rem 0.5rem;
-    text-align: center;
-    text-decoration: none;
-}
-
-.testament-navigation a {
-    display: block;
+  background-color: var(--main-background);
+  color: var(--text-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0 auto;
+  width: min(100%, 40rem);
 }
 
 @media screen and (min-width: 500px) {
-    .testament-navigation {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
+  body {
+    font-size: 20px;
+  }
+}
+
+li,
+p {
+  line-height: 150%;
+}
+
+.skip-link {
+  background-color: var(--text-color);
+  color: var(--main-background);
+  left: -100%;
+  padding: 0.5rem;
+  position: fixed;
+  top: 0;
+}
+
+.skip-link:focus {
+  left: 0;
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+header,
+main {
+  padding: 1rem;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 1em;
+}
+
+h2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header {
+  align-items: center;
+  display: flex;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  justify-content: center;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.logo::after {
+    color: var(--text-color);
+    content: 'ƒ';
+    padding-left: 2px;
+    padding-top: 2px;
+    position: absolute;
+    z-index: -1;
+}
+
+.logo:focus,
+.logo:hover {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.logo:focus::after,
+.logo:hover::after {
+  color: var(--link-color);
+}
+
+.main-nav {
+  display: flex;
+  flex: 1;
+}
+
+.main-nav a + a {
+  margin-left: 1rem;
+}
+
+.chapter-navigation {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+}
+
+.chapter-navigation a,
+.contextual-navigation a {
+  border: 2px solid currentColor;
+  border-bottom-width: 3px;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.testament-navigation {
+  display: grid;
+  gap: 1rem;
+}
+
+.testament-navigation a {
+  display: block;
+}
+
+@media screen and (min-width: 500px) {
+  .testament-navigation {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contextual-navigation {
+  background-color: var(--main-background);
+  border-top: 2px solid currentColor;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+}
+
+.contextual-navigation h2 {
+  margin-top: 0;
+}
+
+.contextual-navigation .increment {
+  display: flex;
+}
+
+.contextual-navigation a {
+  display: block;
+}
+
+.contextual-navigation .increment a {
+  flex: 1;
+}
+
+.contextual-navigation .increment a + a {
+  margin-left: 1rem;
+}
+
+.contextual-navigation .increment + a {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .contextual-navigation {
+    border: 2px solid currentColor;
+    bottom: 1rem;
+    left: initial;
+    min-width: 24rem;
+    right: 1rem;
+  }
+}
+
+.spacer {
+  height: 5rem;
 }

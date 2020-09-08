@@ -10,10 +10,7 @@ module.exports = (config) => {
   );
   config.addFilter("currentChapter", string => Number(string.split('/')[1]))
 
-  const commonWords = ['a', 'and', 'of', 'the']
-  config.addFilter("filterCommonWords", array => array.filter(([word]) => !commonWords.includes(word)))
-
-  config.addPassthroughCopy("./src/styles/");
+  config.addPassthroughCopy("./src/assets/");
 
   return {
     markdownTemplateEngine: "njk",
