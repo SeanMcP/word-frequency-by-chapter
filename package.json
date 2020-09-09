@@ -1,0 +1,34 @@
+{
+  "name": "word-frequency-by-chapter",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "build:watch": "nodemon build.js",
+    "generate": "node generate.js",
+    "generate:watch": "nodemon generate.js",
+    "start": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeanMcP/word-frequency-by-chapter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeanMcP/word-frequency-by-chapter/issues"
+  },
+  "homepage": "https://github.com/SeanMcP/word-frequency-by-chapter#readme",
+  "devDependencies": {
+    "mkdirp": "^1.0.4",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}

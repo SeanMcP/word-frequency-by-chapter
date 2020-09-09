@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ title or pageTitle }}</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
+    <link rel="shortcut icon" href="{{ '/assets/favicon.png' | url }}" type="image/png">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <a class="logo" aria-label="Word Frequency by Bible Chapter" href="{{ '/' | url }}">ƒ</a>
+      <nav class="main-nav" aria-label="main navigation">
+        <a href="{{ '/#old' | url }}" aria-label="Old Testament">OT</a>
+        <a href="{{ '/#new' | url }}" aria-label="New Testament">NT</a>
+        <a href="{{ '/about' | url }}">About</a>
+      </nav>
+    </header>
+    <main id="main" id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
