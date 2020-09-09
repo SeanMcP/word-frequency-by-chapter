@@ -7,8 +7,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js",
-    "build:watch": "nodemon build.js",
+    "build": "eleventy",
     "generate": "node generate.js",
     "generate:watch": "nodemon generate.js",
     "start": "npx eleventy --serve"
@@ -24,10 +23,6 @@
     "url": "https://github.com/SeanMcP/word-frequency-by-chapter/issues"
   },
   "homepage": "https://github.com/SeanMcP/word-frequency-by-chapter#readme",
-  "devDependencies": {
-    "mkdirp": "^1.0.4",
-    "nodemon": "^2.0.2"
-  },
   "dependencies": {
     "@11ty/eleventy": "^0.11.0"
   }
