@@ -19,7 +19,7 @@ module.exports = (config) => {
     pathPrefix: "/word-frequency-by-chapter/",
     dir: {
       input: "src",
-      output: "docs",
+      output: "build",
     },
   };
 };
