@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+{{ displayTitle | log }}
+
+<h1>{{ displayTitle or pageTitle or title }}</h1>
+
+{{ content | safe }}
+{% endblock content %}
