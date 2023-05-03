@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/SeanMcP/word-frequency-by-chapter#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "^2.0.1"
   }
 }
